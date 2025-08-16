@@ -7,5 +7,10 @@
         <input type="text" name="text" required>
         <button type="submit">Generate</button>
     </form>
+    <h2>QR-code decoder</h2>
+    <form action="/decode" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Decode</button>
+    </form>
 </body>
 </html>
