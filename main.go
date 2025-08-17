@@ -37,6 +37,8 @@ func generateQR(c *gin.Context) {
 		return
 	}
 
+	c.Header("Content-Disposition", "attachment; filename=qrcode.png")
+	c.Header("Content-Type", "application/octet-stream")
 	c.Data(200, "image/png", png)
 }
 
